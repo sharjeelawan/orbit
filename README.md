@@ -2,7 +2,7 @@
 
 An interactive portfolio hero: my Dribbble shots arranged on a spinning 3D globe. Click a card and the camera dives in as the shot expands into view.
 
-**Live:** https://orbit-tau-puce.vercel.app
+**Live:** https://orbit.sharjeelawan.xyz
 
 ## How it works
 
