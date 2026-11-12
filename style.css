@@ -17,15 +17,21 @@ html, body {
   font-family: "Inter Tight", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow: hidden;
+  overflow: clip;
+  overscroll-behavior: none;
 }
 
 a { color: inherit; }
 
+/* iOS WebKit lets 3D-transformed children widen the page past overflow: hidden,
+   pushing right-aligned UI off-screen; paint containment keeps them inside. */
 .hero {
   position: relative;
   height: 100svh;
   min-height: 560px;
   overflow: hidden;
+  overflow: clip;
+  contain: paint;
   touch-action: none;
   user-select: none;
   cursor: grab;
@@ -42,6 +48,8 @@ a { color: inherit; }
   place-items: center;
   perspective: var(--p, 1200px);
   pointer-events: none;
+  overflow: hidden;
+  contain: paint;
 }
 
 .globe {
